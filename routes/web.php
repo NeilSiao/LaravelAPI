@@ -22,3 +22,10 @@ Route::get('ok', 'LineMessageController@ok');
 
 Route::get('payment', 'ECPayController@payment');
 Route::post('payment/ECPay', 'ECPayController@ECPay');
+
+// API Collection 
+Route::prefix('collection')->group(function(){
+    Route::get('dogImg', 'APICollectionController@DogApi');
+});
+
+Route::get('dog', 'VisualApiController@dog');
